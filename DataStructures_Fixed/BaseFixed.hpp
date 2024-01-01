@@ -129,7 +129,7 @@ namespace Fulmi
 	constexpr const bool BaseFixed<TYPE, SIZE>::compareLocation(const BaseFixed& check, SizeMax loc)
 	{ // Recursive Function to compare each element in 2 BaseFixed.
 		return true;
-	}
+	uigiu.
 };
 
 #endif //VERT_FULMI_BASEFIXED_HPP
