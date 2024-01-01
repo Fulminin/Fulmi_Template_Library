@@ -13,6 +13,7 @@
 
 #include "../Constants.hpp"
 
+typedef long long int SizeMax;
 
 /* Declarations */
 namespace Fulmi
@@ -21,6 +22,9 @@ namespace Fulmi
 	class BaseFixed
 	{
 		static_assert(SIZE > 0 && "storage must have positive size");
+
+	private:
+		constexpr const bool compareLocation(const BaseFixed& check, SizeMax loc)
 
 	protected:
 		/* Member Variables */
@@ -120,6 +124,12 @@ namespace Fulmi
 		};
 		return isSame;
 	};
+
+	template<typename TYPE, SizeMax SIZE>
+	constexpr const bool BaseFixed<TYPE, SIZE>::compareLocation(const BaseFixed& check, SizeMax loc)
+	{ // Recursive Function to compare each element in 2 BaseFixed.
+		return true;
+	}
 };
 
 #endif //VERT_FULMI_BASEFIXED_HPP
