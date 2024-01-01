@@ -128,6 +128,7 @@ namespace Fulmi
 	template<typename TYPE, SizeMax SIZE>
 	constexpr const bool BaseFixed<TYPE, SIZE>::compareLocation(const BaseFixed& check, SizeMax loc)
 	{ // Recursive Function to compare each element in 2 BaseFixed.
+		test;
 		return true;
 	}
 };
